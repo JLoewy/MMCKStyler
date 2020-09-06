@@ -27,6 +27,18 @@ public enum MMCKColor {
     case buttonRed
     case buttonSubmit
     
+    case backgroundPrimary
+    case backgroundSecondary
+    
+    case textPrimary
+    case textSecondary
+    
+    case seperatorLight
+    case seperatorExtraLight
+    
+    case seperatorDark
+    case seperatorExtraDark
+    
 }
 
 // MARK: - MMCKStyleSource
