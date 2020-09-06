@@ -42,10 +42,7 @@ public protocol MMCKStyleSource: NSObject {
     ///   - pointSize: /CGFloat/
     func font(withType type: MMCKFontType, ofSize pointSize: CGFloat) -> UIFont
     
-    
-    
     // MARK: - Colors
-    
     
     /// Get the applications intepretation of a color
     func color(_ color: MMCKColor) -> UIColor
