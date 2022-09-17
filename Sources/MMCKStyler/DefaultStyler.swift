@@ -67,6 +67,12 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 
             case .separatorExtraDark:
                 return UIColor(red: 49.0/255.0, green: 49.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+            
+            case .lightBlue, .activeBlue:
+                return UIColor.blue
+
+            case .missingInput:
+                return UIColor.red.withAlphaComponent(0.8)
         }
     }
 }
