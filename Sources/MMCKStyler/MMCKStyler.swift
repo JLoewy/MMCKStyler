@@ -33,11 +33,11 @@ public enum MMCKColor {
     case textPrimary
     case textSecondary
     
-    case seperatorLight
-    case seperatorExtraLight
+    case separatorLight
+    case separatorExtraLight
     
-    case seperatorDark
-    case seperatorExtraDark
+    case separatorDark
+    case separatorExtraDark
     
 }
 
@@ -50,13 +50,15 @@ public protocol MMCKStyleSource: NSObject {
     /// Gets the applications font that is used for the type
     ///
     /// - Parameters:
-    ///   - type:      /FontType/
-    ///   - pointSize: /CGFloat/
+    ///   - type:      **FontType**
+    ///   - pointSize: **CGFloat**
     func font(withType type: MMCKFontType, ofSize pointSize: CGFloat) -> UIFont
     
     // MARK: - Colors
     
-    /// Get the applications intepretation of a color
+    /// Get the applications interpretation of a color
+    /// - Parameter color: **MMCKColor**
+    /// - Returns: **UIColor** Apps UIColor equivalent
     func color(_ color: MMCKColor) -> UIColor
     
 }
