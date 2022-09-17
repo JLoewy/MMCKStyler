@@ -42,6 +42,7 @@ public enum MMCKColor {
     case separatorDark
     case separatorExtraDark
     
+    case missingInput    
 }
 
 // MARK: - MMCKStyleSource
