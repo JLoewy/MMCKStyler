@@ -60,10 +60,10 @@ public protocol MMCKStyleSource: NSObject {
     
     // MARK: - Colors
     
-    /// Get the applications interpretation of a color
+    /// Get the applications interpretation  of a color
     /// - Parameter color: **MMCKColor**
     /// - Returns: **UIColor** Apps UIColor equivalent
-    func color(_ color: MMCKColor) -> UIColor
+    func color(_ color: MMCKColor) -> UIColor 
     
 }
 
