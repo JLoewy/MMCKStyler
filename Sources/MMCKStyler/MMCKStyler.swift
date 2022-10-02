@@ -32,9 +32,11 @@ public enum MMCKColor {
     
     case backgroundPrimary
     case backgroundSecondary
+    case backgroundBlueLight
     
     case textPrimary
     case textSecondary
+    case textDarkBlue
     
     case separatorLight
     case separatorExtraLight
@@ -43,6 +45,14 @@ public enum MMCKColor {
     case separatorExtraDark
     
     case missingInput    
+}
+
+public enum MMImage {
+    
+    case plusAdd
+    case closeX
+    
+    case mmPlay
 }
 
 // MARK: - MMCKStyleSource

@@ -73,6 +73,10 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
 
             case .missingInput:
                 return UIColor.red.withAlphaComponent(0.8)
+            case .backgroundBlueLight:
+                return UIColor.blue
+            case .textDarkBlue:
+                return UIColor.blue
         }
     }
 }
