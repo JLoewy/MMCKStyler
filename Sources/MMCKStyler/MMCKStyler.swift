@@ -74,9 +74,18 @@ public protocol MMCKStyleSource: NSObject {
     /// - Parameter color: **MMCKColor**
     /// - Returns: **UIColor** Apps UIColor equivalent
     func color(_ color: MMCKColor) -> UIColor 
-    
 }
 
+#if canImport(SwiftUI)
+import SwiftUI
 
+public extension UIFont {
+    var font: Font { Font(self) }
+}
+
+public extension UIColor {
+    var color: Color { Color(self) }
+}
+#endif
 
 #endif
