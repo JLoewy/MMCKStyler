@@ -41,6 +41,9 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
             case .buttonRed:
                 return UIColor.systemRed
                 
+            case .buttonGreen:
+                return UIColor.green
+                
             case .buttonSubmit:
                 return UIColor.cyan
                 
@@ -61,6 +64,9 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 
             case .separatorExtraLight:
                 return UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+                
+            case .separatorSemiDark:
+                return UIColor(red: 150.0/255.0, green: 150.0/255.0, blue: 150.0/255.0, alpha: 1.0)
                 
             case .separatorDark:
                 return UIColor(red: 100.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1.0)

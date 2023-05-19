@@ -25,6 +25,7 @@ public enum MMCKColor {
     
     case buttonBlue
     case buttonRed
+    case buttonGreen
     case buttonSubmit
     
     case lightBlue
@@ -41,6 +42,7 @@ public enum MMCKColor {
     case separatorLight
     case separatorExtraLight
     
+    case separatorSemiDark
     case separatorDark
     case separatorExtraDark
     
