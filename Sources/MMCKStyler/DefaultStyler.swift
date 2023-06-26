@@ -54,10 +54,10 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 return UIColor(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0, alpha: 1.0)
                 
             case .textPrimary:
-                return UIColor.black
+                return UIColor(red: 49.0/255.0, green: 49.0/255.0, blue: 49.0/255.0, alpha: 1.0)
                 
             case .textSecondary:
-                return UIColor(red: 49.0/255.0, green: 49.0/255.0, blue: 49.0/255.0, alpha: 1.0)
+                return UIColor(red: 163.0/255.0, green: 163.0/255.0, blue: 163.0/255.0, alpha: 1.0)
                 
             case .separatorLight:
                 return UIColor(red: 241.0/255.0, green: 241.0/255.0, blue: 241.0/255.0, alpha: 1.0)

@@ -46,7 +46,7 @@ public enum MMCKColor {
     case separatorDark
     case separatorExtraDark
     
-    case missingInput    
+    case missingInput
 }
 
 public enum MMImage {
@@ -75,7 +75,31 @@ public protocol MMCKStyleSource: NSObject {
     /// Get the applications interpretation  of a color
     /// - Parameter color: **MMCKColor**
     /// - Returns: **UIColor** Apps UIColor equivalent
-    func color(_ color: MMCKColor) -> UIColor 
+    func color(_ color: MMCKColor) -> UIColor
+    
+    var primaryTextColor: Color { get }
+    var secondaryTextColor: Color { get }
+    
+    var primaryBackgroundColor: Color { get }
+    var secondaryBackgroundColor: Color { get }
+}
+
+public extension MMCKStyleSource {
+    
+    var primaryTextColor: Color {
+        self.color(.textPrimary).color
+    }
+    var secondaryTextColor: Color {
+        self.color(.textSecondary).color
+    }
+    
+    var primaryBackgroundColor: Color {
+        self.color(.backgroundPrimary).color
+    }
+    var secondaryBackgroundColor: Color {
+        self.color(.backgroundSecondary).color
+    }
+    
 }
 
 #if canImport(SwiftUI)
