@@ -83,6 +83,8 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 return UIColor.blue
             case .textDarkBlue:
                 return UIColor.blue
+            case .appMain:
+                return UIColor.systemBlue
         }
     }
 }

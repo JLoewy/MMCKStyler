@@ -23,6 +23,8 @@ public enum MMCKFontType {
 
 public enum MMCKColor {
     
+    case appMain
+    
     case buttonBlue
     case buttonRed
     case buttonGreen
