@@ -9,6 +9,7 @@ import Foundation
 
 #if os(iOS)
 import UIKit
+import SwiftUI
 
 // MARK: - MCKFontType
 
@@ -71,6 +72,13 @@ public protocol MMCKStyleSource: NSObject {
     ///   - type:      **FontType**
     ///   - pointSize: **CGFloat**
     func font(withType type: MMCKFontType, ofSize pointSize: CGFloat) -> UIFont
+    
+    /// Gets the applications font that is used for the type
+    ///
+    /// - Parameters:
+    ///   - type:      **FontType**
+    ///   - pointSize: **CGFloat**
+    func font(_ type: MMCKFontType, size: CGFloat) -> Font
     
     // MARK: - Colors
     

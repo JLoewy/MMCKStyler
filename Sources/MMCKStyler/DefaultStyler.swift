@@ -8,6 +8,7 @@
 import Foundation
 #if os(iOS)
 import UIKit
+import SwiftUI
 
 /// Useful as a default styler as a failsafe incase one doesn't get set.
 /// Fonts use system fonts and colors are 'acceptable'
@@ -29,6 +30,28 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 
             case .bold:
                 return UIFont.systemFont(ofSize: pointSize, weight: .bold)
+        }
+    }
+    
+    public func font(_ type: MMCKFontType, size: CGFloat) -> Font {
+        switch type {
+            case .light:
+                return Font.system(size: size, weight: .light)
+                
+            case .lightItalic:
+                return Font.system(size: size, weight: .light).italic()
+                
+            case .regularItalic:
+                return Font.system(size: size, weight: .regular).italic()
+                
+            case .regular:
+                return Font.system(size: size, weight: .regular)
+                
+            case .semiBold:
+                return Font.system(size: size, weight: .semibold)
+                
+            case .bold:
+                return Font.system(size: size, weight: .bold)
         }
     }
     
