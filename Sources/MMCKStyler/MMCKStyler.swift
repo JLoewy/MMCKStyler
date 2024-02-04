@@ -9,69 +9,24 @@ import Foundation
 
 #if os(iOS)
 import UIKit
+#endif
 import SwiftUI
-
-// MARK: - MCKFontType
-
-public enum MMCKFontType {
-    case light
-    case lightItalic
-    case regular
-    case regularItalic
-    case semiBold
-    case bold
-}
-
-public enum MMCKColor {
-    
-    case appMain
-    
-    case buttonBlue
-    case buttonRed
-    case buttonGreen
-    case buttonSubmit
-    
-    case lightBlue
-    case activeBlue
-    
-    case backgroundPrimary
-    case backgroundSecondary
-    case backgroundBlueLight
-    
-    case textPrimary
-    case textSecondary
-    case textDarkBlue
-    
-    case separatorLight
-    case separatorExtraLight
-    
-    case separatorSemiDark
-    case separatorDark
-    case separatorExtraDark
-    
-    case missingInput
-}
-
-public enum MMImage {
-    
-    case plusAdd
-    case closeX
-    
-    case mmPlay
-}
 
 // MARK: - MMCKStyleSource
 
 public protocol MMCKStyleSource: NSObject {
     
+    
     // MARK: - Fonts
     
+#if os(iOS)
     /// Gets the applications font that is used for the type
     ///
     /// - Parameters:
     ///   - type:      **FontType**
     ///   - pointSize: **CGFloat**
     func font(withType type: MMCKFontType, ofSize pointSize: CGFloat) -> UIFont
+#endif
     
     /// Gets the applications font that is used for the type
     ///
@@ -82,10 +37,18 @@ public protocol MMCKStyleSource: NSObject {
     
     // MARK: - Colors
     
+#if os(iOS)
     /// Get the applications interpretation  of a color
     /// - Parameter color: **MMCKColor**
     /// - Returns: **UIColor** Apps UIColor equivalent
     func color(_ color: MMCKColor) -> UIColor
+#endif
+    
+    
+    /// Get the application interpretation of a Color
+    /// - Parameter type: **MMCKColor**
+    /// - Returns: **Color**
+    func color(ofType type: MMCKColor) -> Color
     
     var primaryTextColor: Color { get }
     var secondaryTextColor: Color { get }
@@ -94,34 +57,22 @@ public protocol MMCKStyleSource: NSObject {
     var secondaryBackgroundColor: Color { get }
 }
 
+// MARK: - Helper Extension
+
 public extension MMCKStyleSource {
     
     var primaryTextColor: Color {
-        self.color(.textPrimary).color
+        self.color(ofType: .textPrimary)
     }
     var secondaryTextColor: Color {
-        self.color(.textSecondary).color
+        self.color(ofType: .textSecondary)
     }
     
     var primaryBackgroundColor: Color {
-        self.color(.backgroundPrimary).color
+        self.color(ofType: .backgroundPrimary)
     }
     var secondaryBackgroundColor: Color {
-        self.color(.backgroundSecondary).color
+        self.color(ofType: .backgroundSecondary)
     }
     
 }
-
-#if canImport(SwiftUI)
-import SwiftUI
-
-public extension UIFont {
-    var font: Font { Font(self) }
-}
-
-public extension UIColor {
-    var color: Color { Color(self) }
-}
-#endif
-
-#endif

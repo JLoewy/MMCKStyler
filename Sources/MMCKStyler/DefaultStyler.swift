@@ -8,12 +8,15 @@
 import Foundation
 #if os(iOS)
 import UIKit
+#endif
+
 import SwiftUI
 
 /// Useful as a default styler as a failsafe incase one doesn't get set.
 /// Fonts use system fonts and colors are 'acceptable'
 public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
     
+#if os(iOS)
     public func font(withType type: MMCKStyler.MMCKFontType, ofSize pointSize: CGFloat) -> UIFont {
             
         switch type {
@@ -30,28 +33,6 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 
             case .bold:
                 return UIFont.systemFont(ofSize: pointSize, weight: .bold)
-        }
-    }
-    
-    public func font(_ type: MMCKFontType, size: CGFloat) -> Font {
-        switch type {
-            case .light:
-                return Font.system(size: size, weight: .light)
-                
-            case .lightItalic:
-                return Font.system(size: size, weight: .light).italic()
-                
-            case .regularItalic:
-                return Font.system(size: size, weight: .regular).italic()
-                
-            case .regular:
-                return Font.system(size: size, weight: .regular)
-                
-            case .semiBold:
-                return Font.system(size: size, weight: .semibold)
-                
-            case .bold:
-                return Font.system(size: size, weight: .bold)
         }
     }
     
@@ -110,6 +91,86 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 return UIColor.systemBlue
         }
     }
-}
+    
 #endif
+    
+    public func font(_ type: MMCKFontType, size: CGFloat) -> Font {
+        switch type {
+            case .light:
+                return Font.system(size: size, weight: .light)
+                
+            case .lightItalic:
+                return Font.system(size: size, weight: .light).italic()
+                
+            case .regularItalic:
+                return Font.system(size: size, weight: .regular).italic()
+                
+            case .regular:
+                return Font.system(size: size, weight: .regular)
+                
+            case .semiBold:
+                return Font.system(size: size, weight: .semibold)
+                
+            case .bold:
+                return Font.system(size: size, weight: .bold)
+        }
+    }
+    
+    public func color(ofType type: MMCKColor) -> Color {
+        
+        switch type {
+            case .buttonBlue:
+                return Color.blue
+                
+            case .buttonRed:
+                return Color.red
+                
+            case .buttonGreen:
+                return Color.green
+                
+            case .buttonSubmit:
+                return Color.blue
+                
+            case .backgroundPrimary:
+                return Color.white
+                
+            case .backgroundSecondary:
+                return Color(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0)
+                
+            case .textPrimary:
+                return Color(red: 49.0/255.0, green: 49.0/255.0, blue: 49.0/255.0)
+                
+            case .textSecondary:
+                return Color(red: 163.0/255.0, green: 163.0/255.0, blue: 163.0/255.0)
+                
+            case .separatorLight:
+                return Color(red: 241.0/255.0, green: 241.0/255.0, blue: 241.0/255.0)
+                
+            case .separatorExtraLight:
+                return Color(red: 245.0/255.0, green: 245.0/255.0, blue: 245.0/255.0)
+                
+            case .separatorSemiDark:
+                return Color(red: 150.0/255.0, green: 150.0/255.0, blue: 150.0/255.0)
+                
+            case .separatorDark:
+                return Color(red: 100.0/255.0, green: 100.0/255.0, blue: 100.0/255.0)
+                
+            case .separatorExtraDark:
+                return Color(red: 49.0/255.0, green: 49.0/255.0, blue: 49.0/255.0)
+            
+            case .lightBlue, .activeBlue:
+                return Color.blue
+
+            case .missingInput:
+                return Color.pink
+                
+            case .backgroundBlueLight:
+                return Color.blue
+            case .textDarkBlue:
+                return Color.blue
+            case .appMain:
+                return Color.blue
+        }
+    }
+}
 
