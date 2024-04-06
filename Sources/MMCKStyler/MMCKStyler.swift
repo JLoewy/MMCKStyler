@@ -19,7 +19,7 @@ public protocol MMCKStyleSource: NSObject {
     
     // MARK: - Fonts
     
-#if os(iOS)
+#if os(iOS) || os(visionOS)
     /// Gets the applications font that is used for the type
     ///
     /// - Parameters:
@@ -37,7 +37,7 @@ public protocol MMCKStyleSource: NSObject {
     
     // MARK: - Colors
     
-#if os(iOS)
+#if os(iOS) || os(visionOS)
     /// Get the applications interpretation  of a color
     /// - Parameter color: **MMCKColor**
     /// - Returns: **UIColor** Apps UIColor equivalent

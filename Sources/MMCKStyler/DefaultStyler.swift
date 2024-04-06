@@ -16,7 +16,7 @@ import SwiftUI
 /// Fonts use system fonts and colors are 'acceptable'
 public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
     
-#if os(iOS)
+#if os(iOS) || os(visionOS)
     public func font(withType type: MMCKStyler.MMCKFontType, ofSize pointSize: CGFloat) -> UIFont {
             
         switch type {
