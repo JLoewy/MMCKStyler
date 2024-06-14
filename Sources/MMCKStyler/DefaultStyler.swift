@@ -49,7 +49,7 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 return UIColor.green
                 
             case .buttonSubmit:
-                return UIColor.cyan
+                return UIColor(red: 29.0/255.0, green: 143.0/255.0, blue: 212.0/255.0, alpha: 1.0)
                 
             case .backgroundPrimary:
                 return UIColor.white
