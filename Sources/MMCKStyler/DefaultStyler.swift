@@ -89,6 +89,22 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 return UIColor.blue
             case .appMain:
                 return UIColor.systemBlue
+                
+            // Added 2024.06.27
+            case .nutrientProtein:
+                return #colorLiteral(red: 0.1087084189, green: 0.8588756323, blue: 0.999873817, alpha: 1)
+            case .nutrientCarbs:
+                return #colorLiteral(red: 0.5331938863, green: 0.7921944261, blue: 0.2744704485, alpha: 1)
+            case .nutrientTotalFat:
+                return #colorLiteral(red: 0.9411805868, green: 0.4588466287, blue: 0.2117815316, alpha: 1)
+            case .nutrientCalories:
+                return #colorLiteral(red: 0.1133083776, green: 0.5686687231, blue: 0.8351886868, alpha: 1)
+            case .nutrientFatMicro:
+                return #colorLiteral(red: 0.9842956662, green: 0.6549350619, blue: 0.4038903713, alpha: 1)
+            case .nutrientCarbMicro:
+                return #colorLiteral(red: 0.5763471723, green: 0.792196691, blue: 0.5097384453, alpha: 1)
+            case .nutrientDefault:
+                return self.color(.textSecondary)
         }
     }
     
@@ -170,6 +186,22 @@ public class MMCKDefaultStyler: NSObject, MMCKStyleSource {
                 return Color.blue
             case .appMain:
                 return Color.blue
+                
+                // Added 2024.06.27
+            case .nutrientProtein:
+                return Color(#colorLiteral(red: 0.1087084189, green: 0.8588756323, blue: 0.999873817, alpha: 1))
+            case .nutrientCarbs:
+                return Color(#colorLiteral(red: 0.5331938863, green: 0.7921944261, blue: 0.2744704485, alpha: 1))
+            case .nutrientTotalFat:
+                return Color(#colorLiteral(red: 0.9411805868, green: 0.4588466287, blue: 0.2117815316, alpha: 1))
+            case .nutrientCalories:
+                return Color(#colorLiteral(red: 0.1133083776, green: 0.5686687231, blue: 0.8351886868, alpha: 1))
+            case .nutrientFatMicro:
+                return Color(#colorLiteral(red: 0.9842956662, green: 0.6549350619, blue: 0.4038903713, alpha: 1))
+            case .nutrientCarbMicro:
+                return Color(#colorLiteral(red: 0.5763471723, green: 0.792196691, blue: 0.5097384453, alpha: 1))
+            case .nutrientDefault:
+                return self.color(ofType: .textSecondary)
         }
     }
 }

@@ -35,4 +35,12 @@ public enum MMCKColor {
     case separatorExtraDark
     
     case missingInput
+    
+    case nutrientProtein
+    case nutrientCarbs
+    case nutrientTotalFat
+    case nutrientCalories
+    case nutrientFatMicro
+    case nutrientCarbMicro
+    case nutrientDefault
 }
